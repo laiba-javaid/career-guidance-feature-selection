@@ -6,6 +6,7 @@ It combines **feature selection (Information Gain)** with multiple classifiers (
 The final system is deployed using **Streamlit** for an interactive UI.
 
 ---
+🔗 **Live Demo**: [Career Guidance System](https://career-guidance-system.streamlit.app)  
 
 ## 🧠 Project Workflow
 
@@ -79,5 +80,76 @@ Performance graphs (Accuracy, Precision, Recall vs. Threshold) are generated and
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/career-guidance-system.git
-cd career-guidance-system
+git clone https://github.com/laiba-javaid/machine-learning-based-career-guidance-system.git
+cd machine-learning-based-career-guidance-system
+```
+### 1. Create Virtual Environment
+For Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+For macOS/Linux:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4. Train & Save Model
+
+Run the Jupyter Notebook to:
+
+- Train Decision Tree, Naive Bayes, k-NN.
+
+- Perform feature selection.
+
+- Save best model + encoders.
+```bash
+jupyter notebook career_recommendation.ipynb
+```
+
+Artifacts will be saved in the model/ folder:
+
+- saved_model.pkl
+
+- label_encoders.pkl
+
+- selected_features.pkl
+  
+### 5. Run Streamlit App
+```bash
+streamlit run app.py
+```
+---
+## 🧪 Requirements
+
+- Python 3.8+
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- Matplotlib
+- Streamlit
+
+Install with:
+```bash
+pip install pandas numpy scikit-learn joblib matplotlib streamlit
+```
+
+## 📌 Notes
+
+- The dataset is categorical-heavy, making Decision Trees and Naive Bayes suitable.
+- Performance can be improved with:
+  - Hyperparameter tuning.
+  - Larger dataset.
+  - Ensemble models (e.g., Random Forest, XGBoost).
+- Current system is designed as a desktop ML app with local model inference.
+
+
+### 👩‍💻 Author
+
+Developed by Laiba Javaid | 2025
